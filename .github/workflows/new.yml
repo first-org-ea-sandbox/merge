@@ -27,6 +27,9 @@ jobs:
 
       - name: Set GitHub Summary
         run: |
+          
+          git config --global user.email "oki.maureen.eloho@gmail.com"
+          git config --global user.name "okimaureen"
           git tag -a "prod-deployed-$(git rev-parse --short HEAD)" -m "Prod deployed"
           git push -f origin --tag
           echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
