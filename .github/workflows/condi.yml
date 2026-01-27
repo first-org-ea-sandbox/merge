@@ -2,7 +2,7 @@ name: Sample Conditional Job
 
 on:
   push:
-
+  pull_request: 
 jobs:
   conditional-job:
     if: github.ref == 'refs/heads/main'
